@@ -81,6 +81,8 @@ for task in $tasks; do
 	fi
 done
 
+cat $report > $GITHUB_STEP_SUMMARY
+
 echo
 echo
 
