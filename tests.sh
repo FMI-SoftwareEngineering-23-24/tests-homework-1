@@ -81,7 +81,9 @@ for task in $tasks; do
 	fi
 done
 
-cat $report > $GITHUB_STEP_SUMMARY
+tail -n +3 $report > $GITHUB_STEP_SUMMARY
+echo >> $GITHUB_STEP_SUMMARY
+echo 'Download "results" above to see the full test results' >> $GITHUB_STEP_SUMMARY
 
 echo
 echo
